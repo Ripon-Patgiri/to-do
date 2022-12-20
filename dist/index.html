@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>To Do</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <i class="fa-solid fa-list-check"></i>
+        <h1 class="page-name">To Do</h1>
+      </div>
+    </header>
+    <main class="main">
+      <nav class="nav" id="nav">
+        <!-- Default List Option -->
+        <div class="default-list">
+          <button class="button-default-list" id="button-default-list">
+            <i class="fa-thin fa-list-ol"></i>
+            List
+          </button>
+        </div>
+        <!-- Mental Dumping -->
+        <div class="mental-dumping-list" id="mental-dumping-list">
+          <button class="mental-dumping-btn" id="mentalDumpingBtn">
+            <i class="fa-solid fa-head-side-brain"></i>
+            Mental Dumping
+          </button>
+        </div>
+      </nav>
+      <!-- View Area -->
+      <div class="view-area" id="view-area"></div>
+    </main>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
