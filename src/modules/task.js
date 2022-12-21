@@ -1,4 +1,4 @@
-class Task { // Class : a blueprint for creating objects. Objects created from class are called Instance of that class.
+export default class Task { // Class : a blueprint for creating objects. Objects created from class are called Instance of that class.
   constructor(name, dueDate = "No Date") { // called when a new instance of the class is created. i.e. an object is created.
     this.name = name;  // this keyword refers to the current instance of the class.
     this.dueDate = dueDate;
