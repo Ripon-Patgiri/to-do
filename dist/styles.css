@@ -1,0 +1,49 @@
+/* CSS Reset Start */
+/* Reset styles for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset styles for specific elements */
+body {
+  font-family: sans-serif;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+/* Remove default styling for form elements */
+input[type="text"],
+select,
+textarea {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* Reset list styles */
+ul,
+ol {
+  list-style: none;
+}
+/* CSS Reset End  */
+
+body {
+    background-color: black;
+    color: white;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    border: 1px solid white;
+}
