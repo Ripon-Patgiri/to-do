@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://to-do/./src/index.js?");
+eval("const listBtn = document.getElementById(\"button-list\");\r\n\r\nlistBtn.addEventListener(\"click\", () => {\r\n  // Extract View Area\r\n  const viewArea = document.getElementById(\"view-area\");\r\n\r\n  // Create form element\r\n  const form = document.createElement(\"form\");\r\n\r\n  // create input elements\r\n  const input = document.createElement(\"input\");\r\n  input.type = \"text\";\r\n  input.placeholder = \"Enter a Task\";\r\n\r\n  // Create the submit button\r\n  const button = document.createElement(\"button\");\r\n  button.type = \"submit\";\r\n  button.textContent = \"Add Task\";\r\n\r\n  //   Add the input field and button to the form\r\n  form.appendChild(input);\r\n  form.appendChild(button);\r\n\r\n  //   Add form to view area\r\n  viewArea.appendChild(form);\r\n\r\n  console.log(\"Completed function\")\r\n});\r\n\n\n//# sourceURL=webpack://to-do/./src/index.js?");
 
 /***/ })
 

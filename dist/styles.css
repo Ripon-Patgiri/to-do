@@ -33,10 +33,14 @@ ol {
   list-style: none;
 }
 /* CSS Reset End  */
+html {
+    height: 100%;
+}
 
 body {
     background-color: black;
     color: white;
+    height: 100%;
 }
 
 /* Header */
@@ -46,4 +50,43 @@ body {
     padding: 20px;
     gap: 10px;
     border: 1px solid white;
+}
+
+/* Main */
+.main {
+    height: 100%;
+}
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 15vw;
+    border: 1px solid white;
+    height: 100%;
+    padding-top: 20px;
+}
+
+/* View Area */
+.view-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form {
+    color: wheat;
+}
+
+.input {
+    color: white;
+}
+
+
+
+
+
+i {
+    font-size: 30px;
 }
