@@ -15,33 +15,27 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <!-- Header -->
-    <header class="header">
-      <i class="fa-solid fa-list-check"></i>
-      <h1 class="page-name">To Do</h1>
-    </header>
+    <h1 class="title">Things To Do</h1>
 
-    <!-- Main -->
-    <main class="main">
-      <nav class="nav" id="nav">
-        <!-- Default List Option -->
-        <div class="default-list">
-          <button class="button-list" id="button-list">
-            <i class="fa-thin fa-list-ol"></i>
-            List
-          </button>
-        </div>
-        <!-- Mental Dumping -->
-        <div class="mental-dumping-list" id="mental-dumping-list">
-          <button class="mental-dumping-btn" id="mentalDumpingBtn">
-            <i class="fa-solid fa-head-side-brain"></i>
-            Mental Dumping
-          </button>
-        </div>
-      </nav>
-      <!-- View Area -->
-      <div class="view-area" id="view-area"></div>
-    </main>
-    <script src="main.js"></script>
+    <div class="all-tasks">
+      <h2 class="task-list-title">My Lists</h2>
+      <ul class="task-list">
+        <li class="active-list">To Do Project</li>
+        <li>HPSC Lab</li>
+        <li>Mongo for XML</li>
+      </ul>
+
+      <form action="">
+        <input
+          type="text"
+          class="new list"
+          placeholder="new list name"
+          aria-label="new list name"
+        />
+        <button class="btn list" aria-label="create new list ">+</button>
+      </form>
+    </div>
+
+    <div class="todo-list"></div>
   </body>
 </html>
