@@ -1,9 +1,18 @@
 const listBtn = document.getElementById("button-list");
+const viewArea = document.getElementById("view-area");
+const addTaskBtn = document.createElement("button");
 
-listBtn.addEventListener("click", () => {
-  // Extract View Area
-  const viewArea = document.getElementById("view-area");
+function showFormForList() {
+  // create a button for adding the task
+  
+  addTaskBtn.type = "submit";
+  addTaskBtn.textContent = "Add New Task";
 
+  viewArea.appendChild(addTaskBtn);
+}
+
+listBtn.addEventListener("click", showFormForList());
+addTaskBtn.addEventListener("click", () => {
   // Create form element
   const form = document.createElement("form");
 
@@ -24,5 +33,5 @@ listBtn.addEventListener("click", () => {
   //   Add form to view area
   viewArea.appendChild(form);
 
-  console.log("Completed function")
+  console.log("Completed function");
 });
