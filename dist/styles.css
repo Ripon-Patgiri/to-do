@@ -1,3 +1,8 @@
+:root {
+  --clr-primary: #646e78;
+  --clr-light: #dcccbb;
+}
+
 /* CSS Reset Start */
 /* Reset styles for all elements */
 * {
@@ -6,83 +11,62 @@
   box-sizing: border-box;
 }
 
-/* Reset styles for specific elements */
-body {
-  font-family: sans-serif;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-  color: inherit;
-}
-
-/* Remove default styling for form elements */
-input[type="text"],
-select,
-textarea {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-/* Reset list styles */
-ul,
-ol {
-  list-style: none;
-}
 /* CSS Reset End  */
-html {
-  height: 100%;
-}
 
 body {
-  background-color: black;
-  color: white;
-  height: 100%;
+  font-family: "Unbounded", cursive;
+  font-weight: 300;
+  font-size: 1.5rem;
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+
+  display: grid;
+  grid:
+    "header header header header" auto
+    "...... lists  active ......" auto/
+    1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
 }
 
-/* Header */
-.header {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  gap: 10px;
-  border: 1px solid white;
+.title {
+  grid-area: header;
+  text-align: center;
+  font-size: calc(7vw + 2rem);
+  font-weight: 900;
+  color: rgba(0,0,0,0.4);
+  margin: -0.2em 0 0.5em ;
+  letter-spacing: 4px;
 }
 
-/* Main */
-.main {
-  height: 100%;
-}
-.nav {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-  width: 15vw;
-  border: 1px solid white;
-  height: 100%;
-  padding-top: 20px;
+.all-tasks {
+  grid-area: lists;
 }
 
-/* View Area */
-.view-area {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.task-list {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  list-style-type: circle;
 }
 
-form {
-  color: wheat;
+.new {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  border-bottom: 1px solid currentColor;
+  font-size: inherit;
+  outline: none;
+
+  transition: border-bottom 120ms ease-in;
 }
 
-input {
-  color: white;
+.new:focus {
+  border-bottom-width: 3px;
 }
 
-i {
-  font-size: 30px;
+.active-list {
+  font-weight: 800;
+}
+
+.todo-list {
+  grid-area: active;
+
 }
