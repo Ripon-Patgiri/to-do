@@ -16,9 +16,9 @@
     <div class="all-tasks">
       <h2 class="task-list-title">My Lists</h2>
       <ul class="task-list">
-        <li class="active-list">To Do Project</li>
-        <li>HPSC Lab</li>
-        <li>Mongo for XML</li>
+        <li class="list-name active-list">To Do Project</li>
+        <li class="list-name">HPSC Lab</li>
+        <li class="list-name">Mongo for XML</li>
       </ul>
 
       <form action="">
@@ -28,7 +28,7 @@
           placeholder="new list name"
           aria-label="new list name"
         />
-        <button class="btn list" aria-label="create new list ">+</button>
+        <button class="btn create" aria-label="create new list ">+</button>
       </form>
     </div>
 
@@ -43,22 +43,26 @@
           <div class="task">
             <input type="checkbox" id="task-1" />
             <label for="task-1"
-              >Understand To Do JavaScript Functionality</label
+              ><span class="custom-checkbox"></span>Understand To Do
+            </label>
+          </div>
+          <!-- Task 1 -->
+
+          <div class="task">
+            <input type="checkbox" id="task-2" />
+            <label for="task-2"
+              ><span class="custom-checkbox"></span>Style the App</label
             >
           </div>
-          <!-- Task 1 -->
+          <!-- Task 2 -->
 
-          <div class="todo">
-            <input type="checkbox" id="task-2" />
-            <label for="task-2">Style the App</label>
-          </div>
-          <!-- Task 1 -->
-
-          <div class="todo">
+          <div class="task">
             <input type="checkbox" id="task-3" />
-            <label for="task-3">Properly Understand JavaScript</label>
+            <label for="task-3"
+              ><span class="custom-checkbox"></span>Properly Understand</label
+            >
           </div>
-          <!-- Task 1 -->
+          <!-- Task 3 -->
         </div>
         <div class="new-task-creator">
           <form action="">
@@ -68,7 +72,7 @@
               placeholder="new task name"
               aria-label="new task name"
             />
-            <button class="btn task" aria-label="create new task ">+</button>
+            <button class="btn create" aria-label="create new task ">+</button>
           </form>
         </div>
         <div class="delete-stuff">
