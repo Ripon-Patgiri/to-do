@@ -4,13 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <title>To Do</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -36,6 +29,50 @@
       </form>
     </div>
 
-    <div class="todo-list"></div>
+    <div class="todo-list">
+      <div class="todo-header">
+        <h2 class="list-title">To Do Project</h2>
+        <p class="task-count">3 Task Left</p>
+      </div>
+
+      <div class="todo-body">
+        <div class="tasks">
+          <div class="task">
+            <input type="checkbox" id="task-1" />
+            <label for="task-1"
+              >Understand To Do JavaScript Functionality</label
+            >
+          </div>
+          <!-- Task 1 -->
+
+          <div class="todo">
+            <input type="checkbox" id="task-2" />
+            <label for="task-2">Style the App</label>
+          </div>
+          <!-- Task 1 -->
+
+          <div class="todo">
+            <input type="checkbox" id="task-3" />
+            <label for="task-3">Properly Understand JavaScript</label>
+          </div>
+          <!-- Task 1 -->
+        </div>
+        <div class="new-task-creator">
+          <form action="">
+            <input
+              type="text"
+              class="new task"
+              placeholder="new task name"
+              aria-label="new task name"
+            />
+            <button class="btn task" aria-label="create new task ">+</button>
+          </form>
+        </div>
+        <div class="delete-stuff">
+          <button class="btn delete">Clear Completed Task</button>
+          <button class="btn delete">Delete List</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
