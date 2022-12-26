@@ -9,22 +9,24 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap");
     </style>
+    <script defer src="main.js"></script>
   </head>
   <body>
     <h1 class="title">Things To Do</h1>
 
     <div class="all-tasks">
       <h2 class="task-list-title">My Lists</h2>
-      <ul class="task-list">
-        <li class="list-name active-list">To Do Project</li>
+      <ul class="task-list" data-lists>
+        <!-- <li class="list-name active-list">To Do Project</li>
         <li class="list-name">HPSC Lab</li>
-        <li class="list-name">Mongo for XML</li>
+        <li class="list-name">Mongo for XML</li> -->
       </ul>
 
-      <form action="">
+      <form action="" data-new-list-form>
         <input
           type="text"
           class="new list"
+          data-new-list-input
           placeholder="new list name"
           aria-label="new list name"
         />
