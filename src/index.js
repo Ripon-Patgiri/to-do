@@ -24,6 +24,18 @@ listsContainer.addEventListener("click", (e) => {
   saveAndRender();
 });
 
+tasksContainer.addEventListener("click", (e) => {
+  if (e.target.tagName.toLowerCase() === "input") {
+    const selectedList = lists.find((list) => list.id === selectedListId);
+    const selectedTask = selectedList.tasks.find(
+      (task) => task.id === e.target.id
+    );
+    selectedTask.complete = e.target.checked;
+    save();
+    renderTaskCount(selectedList);
+  }
+});
+
 newListForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const listName = newListInput.value;
@@ -40,8 +52,8 @@ newTaskForm.addEventListener("submit", (e) => {
   if (taskName == null || taskName === "") return;
   const task = createTask(taskName); // passing to a function to add the name to the list
   newTaskInput.value = null;
-  const selectedList = lists.find(list => list.id === selectedListId)
-  selectedList.tasks.push(task)
+  const selectedList = lists.find((list) => list.id === selectedListId);
+  selectedList.tasks.push(task);
   saveAndRender();
 });
 
