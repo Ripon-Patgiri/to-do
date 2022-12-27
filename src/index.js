@@ -31,7 +31,7 @@ newListForm.addEventListener("submit", (e) => {
   saveAndRender();
 });
 
-deleteListButon.addEventListener("click", (e) => {
+deleteListButon.addEventListener("click", () => {
   lists = lists.filter((list) => list.id != selectedListId);
   selectedListId = null;
   saveAndRender();
@@ -56,11 +56,28 @@ function render() {
   clearElement(listsContainer); // passing to a function that clears the element.
   renderList();
 
+  const selectedList = lists.find((list) => list.id === selectedListId);
   if (selectedListId == null) {
     listDisplayContainer.style.display = "none";
   } else {
     listDisplayContainer.style.display = "";
+    listTitleElement.innerText = selectedList.name;
+    renderTaskCount(selectedList);
+    clearElement(tasks);
+    renderTasks(selectedList);
   }
+}
+
+function renderTasks(selectedList) {
+  
+}
+
+function renderTaskCount(selectedList) {
+  const incompleteTaskCount = selectedList.tasks.filter(
+    (task) => !task.complete
+  ).length;
+  const taskString = incompleteTaskCount === 1 ? "task" : "tasks";
+  listCountElement.innerText = ` ${incompleteTaskCount} ${taskString} remaining`;
 }
 
 function renderList() {
