@@ -1,6 +1,13 @@
 const listsContainer = document.querySelector("[data-lists]"); // To select the lists container
 const newListForm = document.querySelector("[data-new-list-form"); // Select the new list form
 const newListInput = document.querySelector("[data-new-list-input"); // Selects the input area
+const deleteListButon = document.querySelector("[data-delete-list-button]");
+const listDisplayContainer = document.querySelector(
+  "[data-list-display-container]"
+);
+const listTitleElement = document.querySelector("[data-list-title]");
+const listCountElement = document.querySelector("[data-list-count]");
+const tasks = document.querySelector("[data-tasks]");
 
 const LOCAL_STORAGE_LIST_KEY = "task.lists";
 const LOCAL_STORAGE_SELECTED_LIST_ID_KEY = "tasks.selectedListId";
@@ -24,6 +31,12 @@ newListForm.addEventListener("submit", (e) => {
   saveAndRender();
 });
 
+deleteListButon.addEventListener("click", (e) => {
+  lists = lists.filter((list) => list.id != selectedListId);
+  selectedListId = null;
+  saveAndRender();
+});
+
 function createList(name) {
   return { id: Date.now().toString(), name: name, tasks: [] };
 }
@@ -41,7 +54,16 @@ function save() {
 function render() {
   // function to render items in the lists area
   clearElement(listsContainer); // passing to a function that clears the element.
+  renderList();
 
+  if (selectedListId == null) {
+    listDisplayContainer.style.display = "none";
+  } else {
+    listDisplayContainer.style.display = "";
+  }
+}
+
+function renderList() {
   lists.forEach((list) => {
     const listElement = document.createElement("li");
     listElement.classList.add("list-name");
