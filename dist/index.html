@@ -16,11 +16,7 @@
 
     <div class="all-tasks">
       <h2 class="task-list-title">My Lists</h2>
-      <ul class="task-list" data-lists>
-        <!-- <li class="list-name active-list">To Do Project</li>
-        <li class="list-name">HPSC Lab</li>
-        <li class="list-name">Mongo for XML</li> -->
-      </ul>
+      <ul class="task-list" data-lists></ul>
 
       <form action="" data-new-list-form>
         <input
@@ -41,31 +37,7 @@
       </div>
 
       <div class="todo-body">
-        <div class="tasks" data-tasks>
-          <div class="task">
-            <input type="checkbox" id="task-1" />
-            <label for="task-1"
-              ><span class="custom-checkbox"></span>Understand To Do
-            </label>
-          </div>
-          <!-- Task 1 -->
-
-          <div class="task">
-            <input type="checkbox" id="task-2" />
-            <label for="task-2"
-              ><span class="custom-checkbox"></span>Style the App</label
-            >
-          </div>
-          <!-- Task 2 -->
-
-          <div class="task">
-            <input type="checkbox" id="task-3" />
-            <label for="task-3"
-              ><span class="custom-checkbox"></span>Properly Understand</label
-            >
-          </div>
-          <!-- Task 3 -->
-        </div>
+        <div class="tasks" data-tasks></div>
         <div class="new-task-creator">
           <form action="" data-new-task-form>
             <input
@@ -79,7 +51,9 @@
           </form>
         </div>
         <div class="delete-stuff">
-          <button class="btn delete">Clear Completed Task</button>
+          <button class="btn delete" data-clear-completed-task-button>
+            Clear Completed Task
+          </button>
           <button class="btn delete" data-delete-list-button>
             Delete List
           </button>
